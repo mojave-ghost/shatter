@@ -1,0 +1,87 @@
+## Shatter.io Design Document
+
+Here’s a design outline for a World of Warcraft PvP Ranking website, complete with font families, colors, and layout elements.
+
+. Overall Theme and Style
+
+	•	Theme: Dark fantasy, reminiscent of World of Warcraft’s aesthetic.
+	•	Font Families:
+	•	Primary: Roboto, sans-serif (for readability and modern look)
+	•	Secondary: Cinzel, serif (for headings and a more fantasy feel)
+	•	Colors:
+	•	Background: #1a1a1a (very dark gray)
+	•	Primary Text: #f5f5f5 (almost white)
+	•	Secondary Text: #a0a0a0 (light gray)
+	•	Highlight: #ffd700 (gold, for highlights and important elements)
+	•	Accent: #007bff (blue, for buttons and interactive elements)
+
+2. Layout and Structure
+
+Header
+
+	•	Logo: Positioned on the left, using World of Warcraft’s emblem style.
+	•	Navigation Menu:
+	•	Home
+	•	PvP Rankings
+	•	Ladder
+	•	About
+	•	Contact
+	•	(Styled with Roboto, uppercase, with gold hover effect)
+
+Main Section
+
+PvP Rankings
+
+	•	Search Bar: Centered at the top, with a subtle glow effect.
+	•	Placeholder text: “Search for a player…”
+	•	Font: Roboto
+	•	Background: #333333
+	•	Border: 1px solid #ffd700
+	•	Text color: #f5f5f5
+	•	Player Card:
+	•	Background: #2a2a2a
+	•	Border: 1px solid #ffd700
+	•	Margin: 10px
+	•	Padding: 15px
+	•	Rounded corners: 8px
+	•	Shadow: 0px 0px 10px #000000
+	•	Content:
+	•	Player Name: Font Cinzel, color #ffd700
+	•	Ranking: Font Roboto, color #f5f5f5
+	•	Rating: Font Roboto, color #007bff
+
+Current PvP Ladder
+
+	•	Ladder Table:
+	•	Full-width, responsive table with alternating row colors for readability.
+	•	Background: #2a2a2a
+	•	Header: #333333, font Cinzel, color #ffd700
+	•	Rows: even rows #1a1a1a, odd rows #2a2a2a
+	•	Hover effect on rows: background #444444
+	•	Columns:
+	•	Rank
+	•	Player Name
+	•	Rating
+	•	Wins
+	•	Losses
+	•	Font: Roboto
+
+Footer
+
+	•	Background: #1a1a1a
+	•	Text: #a0a0a0
+	•	Links: #f5f5f5, with gold hover effect
+	•	Content:
+	•	Quick Links (Home, PvP Rankings, Ladder, About, Contact)
+	•	Social Media Icons (styled with gold color)
+	•	© 2024 World of Warcraft PvP Rankings
+
+Future Color Schemes:
+- Red: Fury Warrior
+- Blue: Frost Mage
+- Yellow: Assasination Rogue
+- Orange: Guardian Druid
+- Green: Mistweaver Monk
+- Purple: Demonology Warrior
+- White: Alliance
+- Black: Horde
