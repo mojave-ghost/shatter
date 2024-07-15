@@ -1,4 +1,5 @@
 import React from 'react';
+import Home from './components/Home';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Ladder from './components/Ladder';
@@ -14,6 +15,7 @@ function App() {
         <Nav />
       </header>
       <body>
+        <Home />
         <Rankings />
         <Ladder />
         <Footer />

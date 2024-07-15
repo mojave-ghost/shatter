@@ -2,7 +2,7 @@ import React from 'react';
 
 const Nav = () => {
   return (
-    <nav className="nav">
+    <nav className="nav z-50">
       <h1 className="mx-4 font-secondary 
                   text-primaryText text-2xl">
         shatter.io
