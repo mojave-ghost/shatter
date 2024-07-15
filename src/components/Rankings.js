@@ -2,7 +2,8 @@ import React from 'react';
 
 const Rankings = () => {
   return ( 
-    <section>
+    <section id="rankings">
+      
     </section>
    );
 }

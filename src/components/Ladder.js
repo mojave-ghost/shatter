@@ -2,7 +2,7 @@ import React from 'react';
 
 const Ladder = () => {
   return ( 
-    <section>
+    <section id="ladder">
       
     </section>
    );
