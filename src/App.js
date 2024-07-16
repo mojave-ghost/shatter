@@ -20,6 +20,7 @@ function App() {
         <Ladder />
         <Footer />
       </body>
+
     </div>
   );
 }

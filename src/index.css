@@ -13,6 +13,14 @@
   background-size: cover;
   background-position: center;
 }
+
+/* Ladder component styles */
+.button {
+  @apply bg-accent text-primaryText font-primary
+        px-4 py-1 rounded-lg mx-4;
+}
+
+
 .footer {
   @apply bg-background text-primaryText text-center py-4
          fixed bottom-0 left-0 right-0;
