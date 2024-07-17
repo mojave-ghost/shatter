@@ -14,6 +14,15 @@
   background-position: center;
 }
 
+/* Search Component Styles */
+.label {
+  @apply text-primaryText font-secondary my-2;
+}
+.input {
+  @apply bg-white font-primary
+        px-4 py-1 rounded-lg mx-4 my-1;
+}
+
 /* Ladder component styles */
 .button {
   @apply bg-accent text-primaryText font-primary

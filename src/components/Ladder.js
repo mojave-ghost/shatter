@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import SoloLadder from './SoloLadder';
-import TwosLadder from './TwosLadder';
-import ThreesLadder from './ThreesLadder';
-import RBGLadder from './RBGLadder';
+import SoloLadder from './ladders/SoloLadder';
+import TwosLadder from './ladders/TwosLadder';
+import ThreesLadder from './ladders/ThreesLadder';
+import RBGLadder from './ladders/RBGLadder';
 
 const Ladder = () => {
   const [visibleTable, setVisibleTable] = useState('solo');
 
   return ( 
     <section id="ladder" className="my-24">
-      <article className="mx-4 font-secondary ">
+      <article className="mx-4 font-secondary">
         <h1 className="text-2xl">Dragonflight Season 4</h1>
         <div>
           <button className="button" onClick={ () => setVisibleTable('solo')}>Solo Shuffle</button>
