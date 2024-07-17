@@ -9,7 +9,7 @@ const ThreesLadder = () => {
   ];
   const columns = [
     { field: 'col1', headerName: 'Rank', width: 150 },
-    { field: 'col2', headerName: 'Column 2', width: 150 },
+    { field: 'col2', headerName: 'Column 4', width: 150 },
   ];
   return ( 
     <DataGrid 

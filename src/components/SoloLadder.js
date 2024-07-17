@@ -1,8 +1,7 @@
 import React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-import { Container } from '@mui/material';  
 
-const LadderTable = () => {
+const SoloLadder = () => {
   const rows = [ 
     { id: 1, col1: 'Hello', col2: 'World' },
     { id: 2, col1: 'XGrid', col2: 'is Awesome' },
@@ -10,7 +9,7 @@ const LadderTable = () => {
   ];
   const columns = [
     { field: 'col1', headerName: 'Rank', width: 150 },
-    { field: 'col2', headerName: 'Column 2', width: 150 },
+    { field: 'col2', headerName: 'Column 3', width: 150 },
   ];
   return ( 
     <DataGrid 
@@ -20,4 +19,4 @@ const LadderTable = () => {
    );
 }
  
-export default LadderTable;
+export default SoloLadder;
