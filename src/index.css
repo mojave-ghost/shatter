@@ -23,24 +23,24 @@
 }
 /* Search Component Styles */
 .label {
-  @apply text-primaryText font-secondary my-2;
+  @apply text-primaryText md:text-2xl
+          font-secondary my-2;
 }
 .input {
   @apply bg-white font-secondary
-        px-4 py-1 rounded-lg mx-2 my-1;
+        px-4 py-1 md:py-2 rounded-lg mx-2 my-1;
 }
 
 
 /* Ladder component styles */
 .data-grid {
-  @apply mx-4 my-2 border-solid border-2 border-accent; 
+  @apply mx-4 my-2 border-solid border-2 border-accent w-auto; 
 
 }
 .button {
   @apply bg-accent text-primaryText text-sm md:text-lg
           font-primary px-6 py-2 rounded-lg mx-4;
 }
-
 
 
 /* Footer Component Styles */

@@ -19,7 +19,7 @@ const SoloLadder = () => {
   return ( 
     <DataGrid className="data-grid"
       rows={rows} 
-      columns={columns} 
+      columns={columns}
     />
    );
 }
