@@ -6,7 +6,8 @@
 /* Nav Component Styles */
 .nav {
   @apply fixed top-0 left-0 right-0
-        bg-background text-primaryText py-6;
+        bg-background text-primaryText py-6
+        flex items-center justify-between;
 }
 .li-nav {
   @apply text-primaryText font-secondary mx-2 tracking-wider
@@ -45,6 +46,6 @@
 /* Footer Component Styles */
 .footer {
   @apply bg-background text-primaryText text-center py-4
-         fixed bottom-0 left-0 right-0;
+          bottom-0 left-0 right-0;
 }
 
