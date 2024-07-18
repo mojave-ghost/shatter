@@ -14,7 +14,7 @@ const Home = () => {
         className="bg-background bg-opacity-5 p-5 rounded-lg" />
       <h1 className="font-secondary font-bold text-3xl mt-2">Shatter.io</h1>
       <h2 className="font-primary text-2xl">World of Warcraft PvP Search Engine</h2>
-      <p className="font-primary text-lg">Find the best players in the world</p>  
+      <p className="font-primary text-lg">Find the best players in the world.</p>  
       <Search />  
     </section>
    );

@@ -6,11 +6,11 @@
 /* Nav Component Styles */
 .nav {
   @apply fixed top-0 left-0 right-0
-        bg-background text-primaryText py-6
-        flex items-center justify-between;
+        bg-background text-primaryText py-6;
 }
 .li-nav {
-  @apply text-primaryText font-secondary mx-2;
+  @apply text-primaryText font-secondary mx-2 tracking-wider
+          block md:inline mt-4 md:mt-0;
 }
 
 
