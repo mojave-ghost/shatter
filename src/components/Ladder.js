@@ -8,10 +8,11 @@ const Ladder = () => {
   const [visibleTable, setVisibleTable] = useState('solo');
 
   return ( 
-    <section id="ladder" className="my-24">
+    <section id="ladder" className="my-6">
       <article className="mx-4 font-secondary">
-        <h1 className="text-2xl">Dragonflight Season 4</h1>
-        <div>
+        <h1 className="text-3xl">Dragonflight Season 4</h1>
+        <div className="flex items-center justify-center
+                        my-6 md:justify-start">
           <button className="button" onClick={ () => setVisibleTable('solo')}>Solo Shuffle</button>
           <button className="button" onClick={ () => setVisibleTable('twos')}>2v2 Arena</button>
           <button className="button" onClick={ () => setVisibleTable('threes')}>3v3 Arena</button>

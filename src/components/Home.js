@@ -12,9 +12,19 @@ const Home = () => {
         src={WoWLogo} 
         alt="DragonflightLogo" 
         className="bg-background bg-opacity-5 p-5 rounded-lg" />
-      <h1 className="font-secondary font-bold text-3xl mt-2">Shatter.io</h1>
-      <h2 className="font-primary text-2xl">World of Warcraft PvP Search Engine</h2>
-      <p className="font-primary text-lg">Find the best players in the world.</p>  
+      <h1 className="font-secondary font-bold text-4xl mt-2 
+                    md:text-5xl md:trackign-widest 
+                    text-primaryText tracking-wider">
+        SHATTER.IO
+      </h1>
+      <h2 className="font-primary text-2xl text-primaryText
+                      md:tracking-wider md:text-3xl">
+        - World of Warcraft PvP Search Engine -
+      </h2>
+      <p className="font-primary italic text-xl text-primaryText
+                    md:tracking-wide md:text-2xl">
+        Find the best players in the world.
+      </p>  
       <Search />  
     </section>
    );

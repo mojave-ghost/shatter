@@ -3,7 +3,7 @@ import React from 'react';
 const Search = () => {
   return ( 
     <section id="search" className="bg-background bg-opacity-55 
-                                    w-1/2 mx-auto my-5 p-4 
+                                    w-3/4 md:w-1/2 mx-auto my-5 p-4 
                                     rounded-lg shadow-lg
                                     relative flex flex-col items-center justify-center">
       <form className="relative flex flex-col items-center justify-center my-4">
