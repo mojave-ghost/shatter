@@ -16,7 +16,6 @@ function App() {
       </header>
       <body>
         <Home />
-        <Search />
         <Ladder />
         <Footer />
       </body>
