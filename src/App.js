@@ -3,7 +3,7 @@ import Home from './components/Home';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Ladder from './components/Ladder';
-import Search from './components/Search';
+import Stats from './components/Stats';
 import './App.css';
 
 
@@ -16,6 +16,7 @@ function App() {
       </header>
       <body>
         <Home />
+        <Stats />
         <Ladder />
         <Footer />
       </body>
