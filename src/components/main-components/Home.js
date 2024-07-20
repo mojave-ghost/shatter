@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from './Search';
-import WoWLogo from '../assets/images/wow-dragonflight.png';
+import WoWLogo from '../../assets/images/wow-dragonflight.png';
 
 
 const Home = () => {

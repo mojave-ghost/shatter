@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import SoloLadder from './ladders/SoloLadder';
-import TwosLadder from './ladders/TwosLadder';
-import ThreesLadder from './ladders/ThreesLadder';
-import RBGLadder from './ladders/RBGLadder';
+import SoloLadder from '../ladders/SoloLadder';
+import TwosLadder from '../ladders/TwosLadder';
+import ThreesLadder from '../ladders/ThreesLadder';
+import RBGLadder from '../ladders/RBGLadder';
 
 const Ladder = () => {
   const [visibleTable, setVisibleTable] = useState('solo');
