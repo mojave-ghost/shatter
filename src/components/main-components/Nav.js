@@ -9,7 +9,6 @@ const Nav = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   }
-
   return (
     <nav className="nav z-50">
       <h1 className="mx-4 md:mx-6 font-secondary tracking-wider

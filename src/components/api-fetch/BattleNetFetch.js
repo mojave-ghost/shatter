@@ -1,5 +1,6 @@
-import React { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import $ from 'jquery';
 
 const BattleNetFetch = () => {
   const [data, setData] = useState(null);
@@ -37,16 +38,43 @@ $.ajax({
 });
 
   useEffect(() => {
+    const fetchToken = async () => {
+      try {
+        const response = await axios.post(
+          'https://oauth.battle.net/token',
+          'grant_type=client_credentials',
+          {
+            headers: {
+              'Authorization': 'Basic ' + btoa(`${process.env.REACT_APP_CLIENT_ID}:${process.env.REACT_APP_CLIENT_SECRET}`),
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+          }
+        );
+        setAccessToken(response.data.access_token);
+      } catch (error) {
+        setError(error);
+      }
+    };
+
+    fetchToken();
+  }, []);
+
+  useEffect(() => {
+    if (!accessToken || !playerName || !realm) return;
+
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://us.api.blizzard.com/profile/wow/character/${realm}/your-character?namespace=${namespace}&locale=en_US&access_token=${apiKey}`);
+        const response = await axios.get(
+          `https://${region}.api.blizzard.com/profile/wow/character/${realm}/${playerName}?namespace=${namespace}&locale=en_US&access_token=${accessToken}`
+        );
         setData(response.data);
       } catch (error) {
         setError(error);
       }
     };
+
     fetchData();
-  }, []);
+  }, [accessToken, playerName, realm]);
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -58,10 +86,10 @@ $.ajax({
   return ( 
     <div>
       <h1>Character Information</h1>
-      <p>Name: {data.name} </p>
-      <p>Realm: {data.name} </p>
-      <p>Level: {data.level} </p>
-      <p>Class: {data.character_class.name} </p>
+      <p>Name: {data.name}</p>
+      <p>Realm: {data.realm.name}</p>
+      <p>Level: {data.level}</p>
+      <p>Class: {data.character_class.name}</p>
       {/* Add more fields as needed */}
     </div>
    );
