@@ -1,9 +1,15 @@
 import React from 'react';
 import Search from './Search';
 import WoWLogo from '../../assets/images/wow-dragonflight.png';
+import BattleNetFetch from '../api-fetch/BattleNetFetch';
 
 
 const Home = () => {
+  const handleSearch = (playerName, realm) => {
+    console.log('Searching for:', playerName, 'in realm:', realm);
+    <BattleNetFetch playerName={playerName} realm={realm} />;
+  };
+
   return ( 
     <section id="home" className="relative flex flex-col
                                   items-center justify-center min-h-screen
@@ -27,7 +33,7 @@ const Home = () => {
           Find the best players in the world.
         </p>  
       </div>
-      <Search />  
+      <Search onSearch={handleSearch} />  
     </section>
    );
 }

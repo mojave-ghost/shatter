@@ -1,6 +1,8 @@
 import React from 'react';
 import Rating from '../character-stats/Rating';
 import Achievements from '../character-stats/Achievements';
+import BattleNetFetch from '../api-fetch/BattleNetFetch';
+
 
 const Stats = () => {
   return ( 
@@ -17,6 +19,7 @@ const Stats = () => {
           <h3>Talents</h3>
         </div>
       </article>
+      <BattleNetFetch />
       <Achievements />
       <Rating />
     </section>

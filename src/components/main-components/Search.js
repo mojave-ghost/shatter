@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BattleNetFetch from '../api-fetch/BattleNetFetch';
 
 const Search = ({ onSearch }) => {
   const [playerName, setPlayerName] = useState('');
@@ -6,6 +7,7 @@ const Search = ({ onSearch }) => {
 
   const handleSearch = () => {
     onSearch(playerName, realm);
+    <BattleNetFetch playerName={playerName} realm={realm} />;
   };
 
   return (

@@ -7,57 +7,22 @@ const BattleNetFetch = ({ playerName, realm }) => {
   const [specData, setSpecData] = useState(null);
   const [avatarData, setAvatarData] = useState(null);
   const [error, setError] = useState(null);
-  const [accessToken, setAccessToken] = useState(null);
-  const region = 'us';
-  const namespace = 'profile-us';
 
   useEffect(() => {
-    const fetchAccessToken = async () => {
-      const credentials = btoa(`${process.env.REACT_APP_CLIENT_ID}:${process.env.REACT_APP_CLIENT_SECRET}`);
-      try {
-        const response = await axios.post(
-          'https://oauth.battle.net/token',
-          'grant_type=client_credentials',
-          {
-            headers: {
-              'Authorization': `Basic ${credentials}`,
-              'Content-Type': 'application/x-www-form-urlencoded',
-            },
-          }
-        );
-        setAccessToken(response.data.access_token);
-      } catch (error) {
-        console.error('Error fetching access token:', error);
-        setError(error);
-      }
-    };
-
-    fetchAccessToken();
-  }, []);
-
-  useEffect(() => {
-    if (!accessToken || !playerName || !realm) return;
+    if (!playerName || !realm) return;
 
     const fetchData = async () => {
       try {
-        const responseCharacterData = await axios.get(
-          `https://${region}.api.blizzard.com/profile/wow/character/${realm}/${playerName}?namespace=${namespace}&locale=en_US&access_token=${accessToken}`
-        );
+        const responseCharacterData = await axios.get(`/api/character/${realm}/${playerName}`);
         setData(responseCharacterData.data);
 
-        const responseCharacterAppearance = await axios.get(
-          `https://${region}.api.blizzard.com/profile/wow/character/${realm}/${playerName}/appearance?namespace=${namespace}&locale=en_US&access_token=${accessToken}`
-        );
+        const responseCharacterAppearance = await axios.get(`/api/character/${realm}/${playerName}/appearance`);
         setAppearanceData(responseCharacterAppearance.data);
 
-        const responseCharacterSpec = await axios.get(
-          `https://${region}.api.blizzard.com/profile/wow/character/${realm}/${playerName}/specializations?namespace=${namespace}&locale=en_US&access_token=${accessToken}`
-        );
+        const responseCharacterSpec = await axios.get(`/api/character/${realm}/${playerName}/specializations`);
         setSpecData(responseCharacterSpec.data);
 
-        const responseCharacterAvatar = await axios.get(
-          `https://${region}.api.blizzard.com/profile/wow/character/${realm}/${playerName}/character-media?namespace=${namespace}&locale=en_US&access_token=${accessToken}`
-        );
+        const responseCharacterAvatar = await axios.get(`/api/character/${realm}/${playerName}/character-media`);
         setAvatarData(responseCharacterAvatar.data);
       } catch (error) {
         console.error('Error fetching character data:', error);
@@ -66,7 +31,7 @@ const BattleNetFetch = ({ playerName, realm }) => {
     };
 
     fetchData();
-  }, [accessToken, playerName, realm]);
+  }, [playerName, realm]);
 
   if (error) {
     return <div>Error: {error.message}</div>;
