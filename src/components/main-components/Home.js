@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from './Search';
-import WoWLogo from '../../assets/images/wow-dragonflight.png';
+import WoWLogo from '../../assets/images/war-within-logo.png';
 import BattleNetFetch from '../api-fetch/BattleNetFetch';
 
 
@@ -17,9 +17,9 @@ const Home = () => {
       <img 
         src={WoWLogo} 
         alt="DragonflightLogo" 
-        className="bg-background bg-opacity-5 p-5 rounded-lg mt-10 md:mt-20" />
-      <div className="my-4 relative flex flex-col items-center justify-center">
-        <h1 className="font-secondary font-bold text-4xl mt-2 
+        className="mt-5 md:mt-10" />
+      <div className="relative flex flex-col items-center justify-center">
+        <h1 className="font-secondary font-bold text-4xl
                       md:text-5xl md:trackign-widest 
                       text-primaryText tracking-wider">
           SHATTER.IO
