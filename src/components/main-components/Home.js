@@ -24,7 +24,7 @@ const Home = () => {
         <h2 className="font-primary text-2xl text-primaryText
                         md:tracking-wider md:text-3xl">
           World of Warcraft PvP Search Engine
-        </h2>
+        </h2>``
         <p className="font-primary italic text-xl text-primaryText
                       md:tracking-wide md:text-2xl">
           Find your next opponent or team!
