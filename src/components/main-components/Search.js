@@ -1,15 +1,6 @@
-import React, { useState } from 'react';
-import BattleNetFetch from '../api-fetch/BattleNetFetch';
+import React from 'react';
 
-const Search = ({ onSearch }) => {
-  const [playerName, setPlayerName] = useState('');
-  const [realm, setRealm] = useState('');
-
-  const handleSearch = () => {
-    onSearch(playerName, realm);
-    <BattleNetFetch playerName={playerName} realm={realm} />;
-  };
-
+const Search = ({ characterName, realm, setCharacterName, setRealm, handleSubmit, loading  }) => {
   return (
     <section
       id="search"
@@ -17,30 +8,34 @@ const Search = ({ onSearch }) => {
     >
       <form
         className="relative flex flex-col items-center justify-center my-4"
-        onSubmit={(e) => e.preventDefault()}
+        onSubmit={handleSubmit}
       >
         <label htmlFor="playername" className="label">
           Player Name
         </label>
         <input
           type="text"
+          value={characterName}
           name="playername"
           className="input"
-          value={playerName}
-          onChange={(e) => setPlayerName(e.target.value)}
+          onChange={(e) => setCharacterName(e.target.value)}
+          placeholder="Character Name"
+          required
         />
         <label htmlFor="realm" className="label">
           Realm
         </label>
         <input
           type="text"
+          value={realm}
           name="realm"
           className="input"
-          value={realm}
-          onChange={(e) => setRealm(e.target.value)}
+          onChangeCapture={(e) => setRealm(e.target.value)} 
+          placeholder="Realm"
+          required
         />
       </form>
-      <button className="button mb-8" onClick={handleSearch}>
+      <button className="button mb-8" type="submit" disabled={loading} onClick={handleSubmit}>
         Search
       </button>
     </section>

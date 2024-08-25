@@ -1,19 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
-import Search from './Search';
-import WoWLogo from '../../assets/images/war-within-logo.png';
-import Stats from './Stats';
-import BattleNetFetch from '../api-fetch/BattleNetFetch';
 
+const CharacterContext = createContext();
 
-const Home = () => {
-  const [accessToken, setAccessToken] = useState('');
+export const CharacterProvider = ({ children }) => {
+const [accessToken, setAccessToken] = useState('');
   const [characterName, setCharacterName] = useState('');
   const [realm, setRealm] = useState('');
   const [characterData, setCharacterData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     // Fetch access token on component mount
@@ -70,45 +66,5 @@ const Home = () => {
       setLoading(false);
     }
   };
+};
 
-  return ( 
-    <section id="home" className="relative flex flex-col
-                                  items-center justify-center min-h-screen
-                                  bg-custom">                                               
-      <img 
-        src={WoWLogo} 
-        alt="DragonflightLogo" 
-        className="mt-5 md:mt-10" />
-      <div className="relative flex flex-col items-center justify-center">
-        <h1 className="font-secondary font-bold text-4xl
-                      md:text-5xl md:trackign-widest 
-                      text-primaryText tracking-wider">
-          SHATTER.IO
-        </h1>
-        <h2 className="font-primary text-2xl text-primaryText
-                        md:tracking-wider md:text-3xl">
-          World of Warcraft PvP Search Engine
-        </h2>
-        <p className="font-primary italic text-xl text-primaryText
-                      md:tracking-wide md:text-2xl">
-          Find your next opponent or team!
-        </p>  
-      </div>
-      <Search
-        characterName={characterName}
-        realm={realm}
-        setCharacterName={setCharacterName}
-        setRealm={setRealm}
-        handleSubmit={handleSubmit}
-        loading={loading}
-      />
-      <BattleNetFetch
-        loading={loading}
-        error={error}
-        characterData={characterData}
-      />
-    </section>
-   );
-}
- 
-export default Home;
