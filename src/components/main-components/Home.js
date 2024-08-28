@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Search from './Search';
 import WoWLogo from '../../assets/images/war-within-logo.png';
-import Stats from './Stats';
 import BattleNetFetch from '../api-fetch/BattleNetFetch';
 
 
@@ -13,7 +12,6 @@ const Home = () => {
   const [characterData, setCharacterData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     // Fetch access token on component mount
