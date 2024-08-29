@@ -3,10 +3,16 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
+
+/* App.js Component Styles */
+.main-content {
+  @apply mt-20 flex-grow p-20;
+}
+
 /* Nav Component Styles */
 .nav {
-  @apply fixed top-0 left-0 right-0
-        bg-background text-primaryText py-6
+  @apply fixed top-0 left-0 right-0 h-20
+        bg-background text-primaryText
         flex items-center justify-between;
 }
 .li-nav {
@@ -46,6 +52,6 @@
 /* Footer Component Styles */
 .footer {
   @apply bg-background text-primaryText text-center py-4
-          bottom-0 left-0 right-0;
+         bottom-0 left-0 right-0  sticky;
 }
 
