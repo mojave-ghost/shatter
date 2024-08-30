@@ -27,7 +27,27 @@ function App() {
         <main>
           <Routes>
             <Route 
-              path="/home" 
+              path=""
+              element={
+                <Home 
+                  setSearchParams={setSearchParams}
+                  setLoading={setLoading}
+                  setError={setError}
+                />
+              } 
+            />
+            <Route 
+              path="/"
+              element={
+                <Home 
+                  setSearchParams={setSearchParams}
+                  setLoading={setLoading}
+                  setError={setError}
+                />
+              } 
+            />
+            <Route 
+              path="/home"
               element={
                 <Home 
                   setSearchParams={setSearchParams}
@@ -52,7 +72,9 @@ function App() {
             />
             <Route path="/ladder" element={<Ladder />} />
           </Routes>
+      
         </main>
+        
         <Footer />
       </div>
     </Router>
