@@ -41,6 +41,7 @@ const Home = () => {
         e.preventDefault();
         setLoading(true);
         setError(null);
+        console.log(error);
         try {
             const appearanceResponse = await axios.get(
                 `https://us.api.blizzard.com/profile/wow/character/${realm.toLowerCase()}/${characterName.toLowerCase()}/appearance?namespace=profile-us&locale=en_US&access_token=${accessToken}`
