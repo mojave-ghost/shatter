@@ -35,6 +35,7 @@ const Home = () => {
             }
         };
         fetchAccessToken();
+        
     }, []);
 
     const handleSubmit = async (e) => {
@@ -42,22 +43,34 @@ const Home = () => {
         setLoading(true);
         setError(null);
         console.log(error);
+        
         try {
+            const summaryResponse = await axios.get(
+                `https://us.api.blizzard.com/profile/wow/character/${realm.toLowerCase()}/${characterName.toLowerCase()}?namespace=profile-us&locale=en_US&access_token=${accessToken}`
+            );
             const appearanceResponse = await axios.get(
                 `https://us.api.blizzard.com/profile/wow/character/${realm.toLowerCase()}/${characterName.toLowerCase()}/appearance?namespace=profile-us&locale=en_US&access_token=${accessToken}`
             );
             const mediaResponse = await axios.get(
                 `https://us.api.blizzard.com/profile/wow/character/${realm.toLowerCase()}/${characterName.toLowerCase()}/character-media?namespace=profile-us&locale=en_US&access_token=${accessToken}`
             );
-            const pvpResponse = await axios.get(
+            const twoVStwoResponse = await axios.get(
+                `https://us.api.blizzard.com/profile/wow/character/${realm.toLowerCase()}/${characterName.toLowerCase()}/pvp-bracket/2v2?namespace=profile-us&locale=en_US&access_token=${accessToken}`
+            );
+            const threeVSthreeResponse = await axios.get(
               `https://us.api.blizzard.com/profile/wow/character/${realm.toLowerCase()}/${characterName.toLowerCase()}/pvp-bracket/3v3?namespace=profile-us&locale=en_US&access_token=${accessToken}`
             );
+
             const characterData = {
                 name: appearanceResponse.data.character.name,
                 realm: appearanceResponse.data.character.realm.name,
+                level: summaryResponse.data.level,
+                race: summaryResponse.data.race.name,
                 class: appearanceResponse.data.playable_class.name,
-                threesRating: pvpResponse.data.rating,
-                avatarUrl: mediaResponse.data.assets.find(asset => asset.key === 'avatar').value
+                activeSpec: summaryResponse.data.active_spec.name,
+                twosRating: twoVStwoResponse.data.rating,
+                threesRating: threeVSthreeResponse.data.rating,
+                avatarUrl: mediaResponse.data.assets.find(asset => asset.key === 'inset').value
             };
             // Navigate to the search results page with the character data
             navigate('/search-results', { state: { characterData, loading: false, error: null } });
