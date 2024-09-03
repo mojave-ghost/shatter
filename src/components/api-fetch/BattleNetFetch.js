@@ -39,6 +39,10 @@ const BattleNetFetch = ({ loading, error, characterData }) => {
           <p>2v2 Rating: {characterData.twosRating}</p>
           <p>3v3 Rating: {characterData.threesRating}</p>
           <h3 className="font-secondary text-lg">Solo Shuffle</h3>
+          <p>{characterData.specOne}: {characterData.soloRating1}</p>
+          <p>{characterData.specTwo}: {characterData.soloRating2}</p>
+          <p>{characterData.specThree}: {characterData.soloRating3}</p>
+          <p>{characterData.specFour}: {characterData.soloRating4}</p>
         </article>
       </section>
     );
