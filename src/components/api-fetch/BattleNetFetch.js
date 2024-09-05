@@ -34,7 +34,10 @@ const BattleNetFetch = ({ loading, error, characterData }) => {
           <p className="mx-2">Level {characterData.level}</p>
           <p className="mx-2">{characterData.race}</p>
         </article>
-        <article id="rating" className="mx-6">
+        <article id="rating" className="bg-background bg-opacity-55 
+                                          w-1/2 md:w-1/4 mx-auto my-5 p-4 
+                                          rounded-lg shadow-lg relative 
+                                          flex flex-col items-center justify-center">
           <h2 className="font-secondary text-xl">Rating</h2>
           <p>2v2 Rating: {characterData.twosRating}</p>
           <p>3v3 Rating: {characterData.threesRating}</p>

@@ -24,7 +24,6 @@ const Nav = () => {
         <ul className={`mx-4 md:flex 
                       ${isOpen ? '' : 'hidden'}`}>
           <li className="li-nav"><a href="home">Home</a></li>
-          <li className="li-nav"><a href="rankings">PvP Rankings</a></li>
           <li className="li-nav"><a href="ladder">Ladder</a></li>
           <li className="li-nav"><a href="about">About</a></li>
         </ul>
