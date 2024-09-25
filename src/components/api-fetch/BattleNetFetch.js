@@ -11,8 +11,9 @@ const BattleNetFetch = ({ loading, error, characterData }) => {
 
   if (characterData) {
     return (
-      <section className="bg-slate-500 w-full">
-        <article className="relative flex flex-col items-center justify-center text-center">
+      <section className="bg-slate-500 w-full h-screen">
+        <article className="relative flex flex-col items-center justify-center text-center
+                            my-10">
           <div className="font-secondary">
             <h1 className="text-3xl">
               {characterData.name}
@@ -22,7 +23,7 @@ const BattleNetFetch = ({ loading, error, characterData }) => {
           <img 
             src={characterData.avatarUrl} 
             alt={`${characterData.name}'s avatar`}
-            className="w-48" />
+            className="w-48 border-2 rounded-md" />
         </article>
         <article className="relative flex items-center justify-center
                             my-2">

@@ -11,7 +11,7 @@
 
 /* Nav Component Styles */
 .nav {
-  @apply fixed top-0 left-0 right-0 h-20
+  @apply top-0 left-0 right-0 h-20
         bg-background text-primaryText
         flex items-center justify-between;
 }
@@ -25,7 +25,7 @@
 .bg-custom {
   background-image: url('../src/assets/images/what-sword-wowbg.jpeg');
   background-size: cover;
-  background-position: center
+  background-position: center;
 }
 /* Search Component Styles */
 .label {
@@ -48,10 +48,9 @@
           font-primary px-6 py-2 rounded-lg mx-4;
 }
 
-
 /* Footer Component Styles */
 .footer {
   @apply bg-background text-primaryText text-center py-4
-         bottom-0 left-0 right-0  sticky;
+         bottom-0 left-0 right-0 fixed;
 }
 

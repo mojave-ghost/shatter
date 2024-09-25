@@ -157,9 +157,9 @@ const Home = () => {
 
     return (
         <section id="home" className="relative flex flex-col items-center justify-center min-h-screen bg-custom">
-            <img src={WoWLogo} alt="DragonflightLogo" className="mt-5 md:mt-10" />
+            <img src={WoWLogo} alt="DragonflightLogo" />
             <div className="relative flex flex-col items-center justify-center">
-                <h1 className="font-secondary font-bold text-4xl md:text-5xl md:trackign-widest text-primaryText tracking-wider">
+                <h1 className="font-secondary font-bold text-4xl md:text-5xl md:tracking-widest text-primaryText tracking-wider">
                     SHATTER.IO
                 </h1>
                 <h2 className="font-primary text-2xl text-primaryText md:tracking-wider md:text-3xl">

@@ -7,8 +7,7 @@ const SearchResults = () => {
     const { characterData, loading, error } = location.state || {};
 
     return (
-        <div className="relative flex justify-center align-center
-                        my-4 pt-40">
+        <div className="relative flex justify-center align-center">
             <BattleNetFetch
                 loading={loading}
                 error={error}
