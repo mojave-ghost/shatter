@@ -23,7 +23,7 @@ const BattleNetFetch = ({ loading, error, characterData }) => {
           <img 
             src={characterData.avatarUrl} 
             alt={`${characterData.name}'s avatar`}
-            className="w-48 border-2 rounded-md" />
+            className="w-1/4 border-2 rounded-md" />
         </article>
         <article className="relative flex items-center justify-center
                             my-2">

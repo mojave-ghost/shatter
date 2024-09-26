@@ -1,6 +1,11 @@
 import React from 'react';
 
 const Search = ({ characterName, realm, setCharacterName, setRealm, handleSubmit, loading  }) => {
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSubmit(e);
+    }
+  }
   return (
     <section
       id="search"
@@ -9,6 +14,7 @@ const Search = ({ characterName, realm, setCharacterName, setRealm, handleSubmit
       <form
         className="relative flex flex-col items-center justify-center my-4"
         onSubmit={handleSubmit}
+        onKeyDown={handleKeyDown}
       >
         <label htmlFor="playername" className="label">
           Player Name
