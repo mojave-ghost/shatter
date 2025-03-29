@@ -51,6 +51,6 @@
 /* Footer Component Styles */
 .footer {
   @apply bg-background text-primaryText text-center py-4
-         bottom-0 left-0 right-0 fixed;
+         bottom-0 left-0 right-0;
 }
 
